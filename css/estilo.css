@@ -1,0 +1,44 @@
+#div1 h1, #div2 h1{
+	color: blue;
+}
+
+table td, th{
+	border: 1px solid;
+}
+
+.menu{
+	list-style-type: none;
+	float: right;
+}
+
+.menu li{
+	margin: 20px;
+	float: left;
+}
+
+#rodape{
+	margin-top: 50px;
+	text-align: center;	
+}
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #fbc0c8 ;
+    border-radius: .3rem;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #f88192;
+    border-color: #f88192;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary{
+    color: #fff;
+    background-color: #df7483;
+    border-color: #df7483;
+}
