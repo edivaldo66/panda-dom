@@ -14,7 +14,7 @@ if($row = mysqli_fetch_assoc($query)){
 
 } else {
 
-echo '<div class="alert alert-danger" role="alert">Falhou!</div>';
+echo '<div class="alert alert-danger" role="alert">Email ou senha incorretos.</div>';
 
 }
 }
