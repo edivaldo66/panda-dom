@@ -1,17 +1,8 @@
 <?php
 
-if (isset($_COOKIE["panda"])) {
-	echo $_COOKIE["panda"];
-}
-else{
-	setcookie("panda", "panda", (time() + 30));	
-}
+	session_start();
 
-exit;
-
-session_start();
-
-require_once("config/conexao_bd.php");
+	require_once("config/conexao_bd.php");
 
 ?>
 
@@ -24,13 +15,15 @@ require_once("config/conexao_bd.php");
 
 		<link rel="stylesheet" href="./css/bootstrap_css/bootstrap.min.css">
 
-		<script src="./js/jquery-3.3.1.slim.min.js"></script>
-		<script src="./js/popper.min.js"></script>
-		<script src="./js/bootstrap_js/bootstrap.min.js" ></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 
 		<script type="text/javascript" src="js/funcoes.js"></script>
+
+		<link rel="icon" type="image/png" href="imagens/panda.png">
 
 	</head>
 
@@ -44,10 +37,12 @@ require_once("config/conexao_bd.php");
 
 				if(isset($_SESSION["nome_usuario"])){
 
-					echo '<h3 style="color: white;>Bem vindo, '. $_SESSION["nome_usuario"] .'!</h3>';
+					echo '<h3 style="color: white;>Bem vindo(a), '. $_SESSION["nome_usuario"] .'!</h3>';
 
 				}else{
-					echo '<h3 style="color: white;">Bem vindo!</h3>';
+
+					echo '<h3 style="color: white;>Bem vindo(a)!</h3>';
+
 				}
 
 			?>
@@ -64,10 +59,10 @@ require_once("config/conexao_bd.php");
 
 						<?php
 
-							if(isset($_SESSION["nome_usuario"])){
+							if(isset($_SESSION["id_usuario"])){
 
-								echo '<a class="btn btn-primary"  role="button" href="?pg=inicio">Painel do usuário</a> ';
-								echo '<a href="?pg=painel&logout=1">Sair</a>';
+								echo '<a class="btn btn-primary"  role="button" href="?pg=painel">Painel do usuário</a> ';
+								echo '<a class="btn btn-primary" name="sair" method="post" href="?pg=painel&sair=1">Sair</a>';
 
 							}else{
 
