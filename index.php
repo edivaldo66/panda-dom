@@ -66,12 +66,12 @@ require_once("config/conexao_bd.php");
 
 							if(isset($_SESSION["nome_usuario"])){
 
-								echo '<a class="btn btn-primary"  role="button" href="?pg=inicio">Painel do usuário</a>';
+								echo '<a class="btn btn-primary"  role="button" href="?pg=inicio">Painel do usuário</a> ';
 								echo '<a href="?pg=painel&logout=1">Sair</a>';
 
 							}else{
 
-								echo '<a class="btn btn-primary"  role="button" href="?pg=cadastro">Seja um Panda</a>';
+								echo '<a class="btn btn-primary"  role="button" href="?pg=cadastro">Seja um Panda</a> ';
 								echo '<a class="btn btn-primary"  role="button" href="?pg=entrar">Entrar</a>';
 
 							}
