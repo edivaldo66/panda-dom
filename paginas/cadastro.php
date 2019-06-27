@@ -23,11 +23,6 @@
 				    <small id="emailHelp" class="form-text text-muted">Não compartilharemos seu e-mail com ninguém.</small>
 				  </div>
 
-				  <div>
-				    <label for="paisInput">País</label>
-				  	<input type="text" class="form-control" id="paisInput" name="paislInput" placeholder="Digite seu pais">
-				  </div>
-
 				  <div class="form-group">
 				    <label for="senhaInput">Senha</label>
 				    <input type="password" class="form-control" id="senhaInput" name="senhaInput" placeholder="Digite sua senha">
