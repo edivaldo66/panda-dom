@@ -1,2 +1,2 @@
 # panda-dom
-Projeto de website destinado à fâ-clubes.
+Projeto de website destinado à fã-clubes.
